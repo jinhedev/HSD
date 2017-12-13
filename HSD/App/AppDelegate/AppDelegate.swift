@@ -9,12 +9,15 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, RealmManagerDelegate {
 
     var window: UIWindow?
+    var realmManager: RealmManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupRealm()
+        self.setupRealmManagerDelegate()
         return true
     }
 
@@ -40,6 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    private func setupRealmManagerDelegate() {
+        self.realmManager = RealmManager()
+        self.realmManager!.delegate = self
+    }
 
 }
 

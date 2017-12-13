@@ -43,6 +43,10 @@
 		C51A5FE01FE197110082A405 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FDF1FE197110082A405 /* SettingsViewController.swift */; };
 		C51A5FE31FE1A0760082A405 /* UIView+Parallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FE21FE1A0760082A405 /* UIView+Parallax.swift */; };
 		C51A5FE51FE1AD9C0082A405 /* ScheduleProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FE41FE1AD9C0082A405 /* ScheduleProcessViewController.swift */; };
+		C51A5FE71FE1B9250082A405 /* URL+documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FE61FE1B9250082A405 /* URL+documents.swift */; };
+		C51A5FE91FE1BA3E0082A405 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FE81FE1BA3E0082A405 /* AuthViewController.swift */; };
+		C51A5FEB1FE1BA9C0082A405 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FEA1FE1BA9C0082A405 /* Welcome.storyboard */; };
+		C51A5FEE1FE1BD570082A405 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FED1FE1BD570082A405 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +101,10 @@
 		C51A5FDF1FE197110082A405 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C51A5FE21FE1A0760082A405 /* UIView+Parallax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Parallax.swift"; sourceTree = "<group>"; };
 		C51A5FE41FE1AD9C0082A405 /* ScheduleProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleProcessViewController.swift; sourceTree = "<group>"; };
+		C51A5FE61FE1B9250082A405 /* URL+documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+documents.swift"; sourceTree = "<group>"; };
+		C51A5FE81FE1BA3E0082A405 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		C51A5FEA1FE1BA9C0082A405 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		C51A5FED1FE1BD570082A405 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 		C51A5F871FE0BB680082A405 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				C51A5FEC1FE1BD4D0082A405 /* Models */,
 				C51A5F881FE0BB770082A405 /* AppDelegate */,
 				C51A5F891FE0BB840082A405 /* Controllers */,
 				C51A5FE11FE1A05F0082A405 /* Extensions */,
@@ -226,6 +235,7 @@
 		C51A5F8D1FE0BBD90082A405 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C51A5FE81FE1BA3E0082A405 /* AuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				C51A5F7B1FE0A8A10082A405 /* LaunchScreen.storyboard */,
+				C51A5FEA1FE1BA9C0082A405 /* Welcome.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,8 +409,17 @@
 			isa = PBXGroup;
 			children = (
 				C51A5FE21FE1A0760082A405 /* UIView+Parallax.swift */,
+				C51A5FE61FE1B9250082A405 /* URL+documents.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C51A5FEC1FE1BD4D0082A405 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C51A5FED1FE1BD570082A405 /* Session.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +488,7 @@
 				C51A5F7D1FE0A8A10082A405 /* LaunchScreen.storyboard in Resources */,
 				C51A5FB71FE0DC880082A405 /* Cartfile.resolved in Resources */,
 				C51A5FB31FE0D9AB0082A405 /* LICENSE in Resources */,
+				C51A5FEB1FE1BA9C0082A405 /* Welcome.storyboard in Resources */,
 				C51A5FBD1FE0F1220082A405 /* MenuBarCell.xib in Resources */,
 				C51A5FA91FE0D2AE0082A405 /* PlaceholderBackgroundView.xib in Resources */,
 				C51A5FD81FE138F40082A405 /* RiderCell.xib in Resources */,
@@ -506,10 +527,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51A5FEE1FE1BD570082A405 /* Session.swift in Sources */,
 				C51A5FDA1FE139CD0082A405 /* RiderCell.swift in Sources */,
 				C51A5FDC1FE13A650082A405 /* RidersViewController.swift in Sources */,
 				C51A5FBB1FE0F0690082A405 /* Menu.swift in Sources */,
 				C51A5FC31FE0F5C80082A405 /* Ride.swift in Sources */,
+				C51A5FE71FE1B9250082A405 /* URL+documents.swift in Sources */,
 				C51A5FCF1FE12DD90082A405 /* WebsViewController.swift in Sources */,
 				C51A5F751FE0A8A10082A405 /* RidesViewController.swift in Sources */,
 				C51A5FDE1FE18EC80082A405 /* User.swift in Sources */,
@@ -521,6 +544,7 @@
 				C51A5FC51FE0F9560082A405 /* RealmManager.swift in Sources */,
 				C51A5FAD1FE0D5920082A405 /* MenuBarView.swift in Sources */,
 				C51A5F731FE0A8A10082A405 /* AppDelegate.swift in Sources */,
+				C51A5FE91FE1BA3E0082A405 /* AuthViewController.swift in Sources */,
 				C51A5FC71FE0FAD20082A405 /* MainRidesCell.swift in Sources */,
 				C51A5FAB1FE0D2D10082A405 /* PlaceholderBackgroundView.swift in Sources */,
 			);

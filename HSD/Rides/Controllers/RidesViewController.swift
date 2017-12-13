@@ -11,6 +11,7 @@ import RealmSwift
 
 class RidesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
+    var realmManager: RealmManager?
     var mainUpcomingRidesCell: UICollectionViewCell?
     var mainCompletedRidesCell: UICollectionViewCell?
     static let storyboard_id = String(describing: RidesViewController.self)
@@ -52,6 +53,8 @@ class RidesViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.setupUICollectionViewDelegateFlowLayout()
         self.setupCollectionView()
         self.setupMenuBarView()
+        self.setupRealmManagerDelegate()
+//        print(RealmManager.pathForDefaultContainer?.absoluteString)
     }
 
     override func didReceiveMemoryWarning() {
@@ -117,6 +120,19 @@ class RidesViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
+    }
+
+}
+
+extension RidesViewController: RealmManagerDelegate {
+
+    fileprivate func setupRealmManagerDelegate() {
+        self.realmManager = RealmManager()
+        self.realmManager!.delegate = self
+    }
+
+    func realmManager(_ manager: RealmManager, didErr error: Error) {
+        print(error.localizedDescription)
     }
 
 }
