@@ -13,7 +13,37 @@ protocol PlaceholderBackgroundViewDelegate: NSObjectProtocol {
     func placeholderBackgroundView(_ view: PlaceholderBackgroundView, didTapInfo button: UIButton)
 }
 
+enum PlaceholderType {
+    case upcoming
+    case completed
+    case promotion
+}
+
 class PlaceholderBackgroundView: UIView {
+
+    var type: PlaceholderType? {
+        didSet {
+            guard let type = type else { return }
+            switch type {
+            case .upcoming:
+                self.placeholderImageView.image = #imageLiteral(resourceName: "WavingHand")
+                self.titleLabel.text = "Welcome"
+                self.subtitleLabel.text = "What would you like to do?"
+            case .completed:
+                self.placeholderImageView.image = #imageLiteral(resourceName: "logo")
+                self.titleLabel.text = "No completed rides..."
+                self.subtitleLabel.text = "...yet"
+                self.scheduleButton.isHidden = true
+                self.infoButton.isHidden = true
+            case .promotion:
+                self.placeholderImageView.image = #imageLiteral(resourceName: "Gift")
+                self.titleLabel.text = "Give & Get Free Rides"
+                self.subtitleLabel.text = "Refer to a friend for $20 off"
+                self.scheduleButton.isHidden = true
+                self.infoButton.isHidden = true
+            }
+        }
+    }
 
     weak var delegate: PlaceholderBackgroundViewDelegate?
 

@@ -16,9 +16,14 @@ enum MainRidesCellType {
 
 class MainRidesCell: UICollectionViewCell {
 
-    var cellType: MainRidesCellType?
-
+    var cellType: MainRidesCellType? {
+        didSet {
+            performInitialFetch()
+        }
+    }
+    var realmManager: RealmManager?
     var rides: Results<Ride>?
+    var notificationToken: NotificationToken?
 
     var ridesViewController: RidesViewController?
     var placeholderBackgroundView: PlaceholderBackgroundView?
@@ -30,14 +35,19 @@ class MainRidesCell: UICollectionViewCell {
     @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
 
     private func setupCollectionView() {
-        self.backgroundColor = UIColor.lightGray
-        self.collectionView.backgroundColor = UIColor.lightGray
+        self.backgroundColor = UIColor.red
+        self.collectionView.backgroundColor = UIColor.white
+        self.collectionView.register(UINib(nibName: EmbededRideCell.nibName, bundle: nil), forCellWithReuseIdentifier: EmbededRideCell.cell_id)
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.setupBackgroundView()
         self.setupCollectionView()
+        self.setupBackgroundView()
+        self.setupRealmManagerDelegate()
+        // REMAKR: do NOT execute fetch here because cellType could be nil at this lifecycle
     }
 
 }
@@ -48,7 +58,7 @@ extension MainRidesCell: PlaceholderBackgroundViewDelegate {
         placeholderBackgroundView = UINib(nibName: PlaceholderBackgroundView.nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? PlaceholderBackgroundView
         self.collectionView.backgroundView = placeholderBackgroundView
         self.placeholderBackgroundView!.delegate = self
-//        self.placeholderBackgroundView!.isHidden = true
+        self.placeholderBackgroundView!.isHidden = true
     }
 
     func placeholderBackgroundView(_ view: PlaceholderBackgroundView, didTapInfo button: UIButton) {
@@ -60,8 +70,8 @@ extension MainRidesCell: PlaceholderBackgroundViewDelegate {
 
     func placeholderBackgroundView(_ view: PlaceholderBackgroundView, didTapSchedule button: UIButton) {
         if let scheduleProcessViewController = self.ridesViewController?.storyboard?.instantiateViewController(withIdentifier: ScheduleProcessViewController.storyboard_id) as? ScheduleProcessViewController {
-            let navigationController = UINavigationController(rootViewController: scheduleProcessViewController)
-            self.ridesViewController?.present(navigationController, animated: true, completion: nil)
+            let navController = UINavigationController(rootViewController: scheduleProcessViewController)
+            self.ridesViewController?.present(navController, animated: true, completion: nil)
         }
     }
 
@@ -78,7 +88,21 @@ extension MainRidesCell: UICollectionViewDelegate {
 extension MainRidesCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collectionView.frame.width, height: 128)
+        guard let unwrappedRides = self.rides?[indexPath.item] else { return CGSize.zero }
+        let cellWidth = self.collectionView.frame.width
+        var cellHeight: CGFloat = 16 + 16 + (0) + 22 + 16 + 16
+        let titleLabelHeight = unwrappedRides.driver_name.heightForText(systemFont: 15, width: cellWidth - 32 - 32)
+        cellHeight += titleLabelHeight
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let insets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        return insets
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 
 }
@@ -94,8 +118,63 @@ extension MainRidesCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // TODO: implement this
-        return UICollectionViewCell()
+        if let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: EmbededRideCell.cell_id, for: indexPath) as? EmbededRideCell {
+            cell.ride = self.rides?[indexPath.item]
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+    }
+
+}
+
+extension MainRidesCell: RealmManagerDelegate {
+
+    private func setupRealmManagerDelegate() {
+        self.realmManager = RealmManager()
+        self.realmManager!.delegate = self
+    }
+
+    func realmManager(_ manager: RealmManager, didErr error: Error) {
+        print(error.localizedDescription)
+    }
+
+    func realmManager(_ manager: RealmManager, didFetchRides rides: Results<Ride>?) {
+        guard let fetchedRides = rides else { return }
+        if !fetchedRides.isEmpty {
+            self.rides = fetchedRides
+            self.setupRealmNotificationForCollectionView()
+        }
+        self.placeholderBackgroundView?.isHidden = fetchedRides.isEmpty ? false : true
+        if self.cellType == MainRidesCellType.upcoming {
+            self.placeholderBackgroundView?.type = PlaceholderType.upcoming
+        } else {
+            self.placeholderBackgroundView?.type = PlaceholderType.completed
+        }
+    }
+
+    private func setupRealmNotificationForCollectionView() {
+        notificationToken = self.rides!.observe({ [weak self] (changes) in
+            guard let collectionView = self?.collectionView else { return }
+            switch changes {
+            case .initial:
+                collectionView.reloadData()
+            case .update(_, deletions: let deletions, insertions: let insertions, modifications: let modifications):
+                collectionView.applyChanges(deletions: deletions, insertions: insertions, updates: modifications)
+            case .error(let err):
+                print(err.localizedDescription)
+            }
+        })
+    }
+
+    func performInitialFetch() {
+        if self.rides == nil {
+            if cellType == MainRidesCellType.upcoming {
+                self.realmManager?.fetchRides(predicate: Ride.upcomingPredicate)
+            } else if cellType == MainRidesCellType.completed {
+                self.realmManager?.fetchRides(predicate: Ride.completedPredicate)
+            }
+        }
     }
 
 }

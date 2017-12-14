@@ -22,7 +22,12 @@ class Ride: Object {
         return "ride_id"
     }
 
+    var users = List<User>()
+
     let rides = LinkingObjects(fromType: User.self, property: "rides")
+
+    static let upcomingPredicate = NSPredicate(format: "is_completed == %@", NSNumber(booleanLiteral: false))
+    static let completedPredicate = NSPredicate(format: "is_completed == %@", NSNumber(booleanLiteral: true))
 
     convenience init(driver_name: String, pickup_date: NSDate, is_completed: Bool) {
         self.init()

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="88" id="kNa-bK-3tX" customClass="RiderCell" customModule="HSD" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="88" id="kNa-bK-3tX" customClass="RiderCell" customModule="HSD" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="356" height="88"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kNa-bK-3tX" id="Gt3-qC-6gu">
@@ -46,12 +46,22 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aec-OM-naY">
+                        <rect key="frame" x="0.0" y="87" width="356" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.29999999999999999" id="zsL-yV-DD1"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="f41-qZ-rEs" firstAttribute="leading" secondItem="Gt3-qC-6gu" secondAttribute="leading" constant="16" id="6Sb-KM-tii"/>
                     <constraint firstAttribute="trailing" secondItem="f41-qZ-rEs" secondAttribute="trailing" constant="16" id="8ga-De-hij"/>
                     <constraint firstItem="f41-qZ-rEs" firstAttribute="top" secondItem="Gt3-qC-6gu" secondAttribute="top" constant="16" id="NVB-Dt-w97"/>
+                    <constraint firstAttribute="bottom" secondItem="aec-OM-naY" secondAttribute="bottom" id="hh7-iP-9gA"/>
                     <constraint firstAttribute="bottom" secondItem="f41-qZ-rEs" secondAttribute="bottom" constant="16" id="jr3-sK-7iL"/>
+                    <constraint firstItem="aec-OM-naY" firstAttribute="leading" secondItem="Gt3-qC-6gu" secondAttribute="leading" id="kJA-5u-c2U"/>
+                    <constraint firstAttribute="trailing" secondItem="aec-OM-naY" secondAttribute="trailing" id="rnL-Wd-4Bd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

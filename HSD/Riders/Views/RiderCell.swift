@@ -26,10 +26,12 @@ class RiderCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 
     private func updateCell() {
-        //
+        guard let unwrappedRider = self.rider else { return }
+        self.titleLabel.text = unwrappedRider.username
     }
 
     private func setupCell() {
+        self.selectionStyle = .none
         self.backgroundColor = UIColor.blue
         self.frameView.layer.cornerRadius = self.frameViewHeightConstraint.constant / 2
         self.frameView.clipsToBounds = true
@@ -42,6 +44,7 @@ class RiderCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        self.titleLabel.text?.removeAll()
     }
 
 }

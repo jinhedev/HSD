@@ -11,15 +11,16 @@ import RealmSwift
 
 class RidesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
-    var realmManager: RealmManager?
-    var mainUpcomingRidesCell: UICollectionViewCell?
-    var mainCompletedRidesCell: UICollectionViewCell?
+    var mainUpcomingRidesCell: MainRidesCell?
+    var mainCompletedRidesCell: MainRidesCell?
+
     static let storyboard_id = String(describing: RidesViewController.self)
 
     @IBOutlet weak var menuBarView: MenuBarView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var giftButton: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
 
     private func setupCollectionView() {
         self.collectionView.backgroundColor = UIColor.white
@@ -46,6 +47,13 @@ class RidesViewController: UIViewController, UICollectionViewDelegate, UICollect
         print(123)
     }
 
+    @IBAction func handleAdd(_ sender: UIBarButtonItem) {
+        if let scheduleProcessViewController = self.storyboard?.instantiateViewController(withIdentifier: ScheduleProcessViewController.storyboard_id) as? ScheduleProcessViewController {
+            let navController = UINavigationController(rootViewController: scheduleProcessViewController)
+            self.present(navController, animated: true, completion: nil)
+        }
+    }
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -53,8 +61,9 @@ class RidesViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.setupUICollectionViewDelegateFlowLayout()
         self.setupCollectionView()
         self.setupMenuBarView()
-        self.setupRealmManagerDelegate()
-//        print(RealmManager.pathForDefaultContainer?.absoluteString)
+        if let path = RealmManager.pathForDefaultContainer?.absoluteString {
+            print(path)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +84,6 @@ class RidesViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.menuBarView.collectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.left)
         self.menuBarView.selectedIndexPath = selectedIndexPath
     }
-
 
     // MARK: - UICollectionViewDelegate
 
@@ -102,16 +110,25 @@ class RidesViewController: UIViewController, UICollectionViewDelegate, UICollect
     // MARK: - UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: MainRidesCell.cell_id, for: indexPath) as? MainRidesCell else {
+        if indexPath.item == 0 {
+            guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: MainRidesCell.cell_id, for: indexPath) as? MainRidesCell else {
+                return UICollectionViewCell()
+            }
+            self.mainUpcomingRidesCell = cell
+            cell.ridesViewController = self
+            cell.cellType = MainRidesCellType.upcoming
+            return cell
+        } else if indexPath.item == 1 {
+            guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: MainRidesCell.cell_id, for: indexPath) as? MainRidesCell else {
+                return UICollectionViewCell()
+            }
+            self.mainCompletedRidesCell = cell
+            cell.ridesViewController = self
+            cell.cellType = MainRidesCellType.completed
+            return cell
+        } else {
             return UICollectionViewCell()
         }
-        cell.ridesViewController = self
-        if indexPath.item == 0 {
-            cell.cellType = MainRidesCellType.upcoming
-        } else if indexPath.item == 1 {
-            cell.cellType = MainRidesCellType.completed
-        }
-        return cell
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -120,19 +137,6 @@ class RidesViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
-    }
-
-}
-
-extension RidesViewController: RealmManagerDelegate {
-
-    fileprivate func setupRealmManagerDelegate() {
-        self.realmManager = RealmManager()
-        self.realmManager!.delegate = self
-    }
-
-    func realmManager(_ manager: RealmManager, didErr error: Error) {
-        print(error.localizedDescription)
     }
 
 }

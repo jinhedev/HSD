@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, RealmManagerDelegate {
 
     var window: UIWindow?
     var realmManager: RealmManager?
+    var sessions: Results<Session>?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupRealm()
         self.setupRealmManagerDelegate()
+        self.realmManager?.fetchSession()
         return true
     }
 
@@ -43,9 +46,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RealmManagerDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: - RealmManagerDelegate
+
+    func realmManager(_ manager: RealmManager, didErr error: Error) {
+        print(error.localizedDescription)
+    }
+
     private func setupRealmManagerDelegate() {
         self.realmManager = RealmManager()
         self.realmManager!.delegate = self
+    }
+
+    func realmManager(_ manager: RealmManager, didFetchSessions sessions: Results<Session>?) {
+        if let expired_at = sessions?.first?.expired_at {
+            let today = Date()
+            if today > expired_at as Date {
+                print("go straight to the app")
+            } else {
+                print("ask the user to login or register")
+            }
+        }
     }
 
 }

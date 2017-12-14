@@ -10,21 +10,38 @@ import UIKit
 
 class EmbededRideCell: UICollectionViewCell {
 
-    var ride: Ride?
+    var ride: Ride? {
+        didSet {
+            self.updateCell()
+        }
+    }
 
     static let nibName = String(describing: EmbededRideCell.self)
     static let cell_id = String(describing: EmbededRideCell.self)
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titileLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
 
-    private func setupCell() {
+    private func updateCell() {
+        self.titileLabel.text = ride?.driver_name
+        self.subtitleLabel.text = ride?.ride_id
+    }
 
+    private func setupCell() {
+        self.backgroundColor = UIColor.red
+        self.containerView.layer.cornerRadius = 8
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupCell()
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.titileLabel.text?.removeAll()
+        self.subtitleLabel.text?.removeAll()
     }
 
 }

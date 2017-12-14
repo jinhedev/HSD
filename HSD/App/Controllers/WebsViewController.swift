@@ -13,7 +13,7 @@ class WebsViewController: UIViewController, WKUIDelegate {
 
     // MARK: - API
 
-    var url: String? = "https://google.com"
+    var url: String? = "https://www.google.com"
 
     static let storyboard_id = String(describing: WebsViewController.self)
 

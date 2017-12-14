@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol ScheduleProcessViewControllerDelegate: NSObjectProtocol {
+    func scheduleProcessViewController(_ viewController: ScheduleProcessViewController, didTapControl button: UIButton)
+}
+
 class ScheduleProcessViewController: UIViewController {
+
+    weak var delegate: ScheduleProcessViewControllerDelegate?
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var nextButton: UIButton!
@@ -17,7 +23,7 @@ class ScheduleProcessViewController: UIViewController {
     static let storyboard_id = String(describing: ScheduleProcessViewController.self)
 
     @IBAction func handleNext(_ sender: UIButton) {
-        print("abc")
+        self.delegate?.scheduleProcessViewController(self, didTapControl: sender)
     }
 
     @IBAction func handleCancel(_ sender: UIBarButtonItem) {
@@ -43,6 +49,14 @@ class ScheduleProcessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if let calendarViewController = segue.destination as? CalendarViewController {
+            calendarViewController.scheduleProcessViewController = self
+            self.delegate = calendarViewController
+        }
     }
 
 }

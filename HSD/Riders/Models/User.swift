@@ -23,6 +23,8 @@ class User: Object {
     var rides = List<Ride>()
     var sessions = List<Session>()
 
+    let user = LinkingObjects(fromType: Ride.self, property: "users")
+
     override static func primaryKey() -> String? {
         return "user_id"
     }
