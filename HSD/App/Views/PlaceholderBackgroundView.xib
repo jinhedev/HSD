@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,8 +19,67 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-4z-QIh">
                     <rect key="frame" x="0.0" y="20" width="461" height="609"/>
                     <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jp1-h7-ibP">
+                            <rect key="frame" x="16" y="429" width="429" height="164"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2rf-mr-NIC">
+                                    <rect key="frame" x="0.0" y="0.0" width="429" height="44"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-Uc-Ewe">
+                                            <rect key="frame" x="0.0" y="0.0" width="206.5" height="44"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Email Invite">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="handleEmail:" destination="iN0-l3-epB" eventType="touchUpInside" id="bxR-pI-5AB"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVu-Ec-ymQ">
+                                            <rect key="frame" x="222.5" y="0.0" width="206.5" height="44"/>
+                                            <color key="backgroundColor" red="0.44705882349999998" green="0.56078431370000004" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Text Invite">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="handleText:" destination="iN0-l3-epB" eventType="touchUpInside" id="yka-qZ-QFS"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="jgB-We-QE3"/>
+                                    </constraints>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCE-qU-bAx">
+                                    <rect key="frame" x="0.0" y="60" width="429" height="44"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="vCh-6d-Uum"/>
+                                    </constraints>
+                                    <state key="normal" title="Schedule a ride">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="handleSchedule:" destination="iN0-l3-epB" eventType="touchUpInside" id="fS5-nt-QY8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgj-Nl-EHm">
+                                    <rect key="frame" x="0.0" y="120" width="429" height="44"/>
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="Ijf-T4-QIb"/>
+                                    </constraints>
+                                    <state key="normal" title="Get more info">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="handleMoreInfo:" destination="iN0-l3-epB" eventType="touchUpInside" id="ASk-VH-JIT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zPF-dE-ccw">
-                            <rect key="frame" x="128" y="116.5" width="205" height="193"/>
+                            <rect key="frame" x="128" y="64" width="205" height="193"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WavingHand" translatesAutoresizingMaskIntoConstraints="NO" id="jkc-ac-b9h">
                                     <rect key="frame" x="38.5" y="0.0" width="128" height="128"/>
@@ -50,43 +108,14 @@
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCE-qU-bAx">
-                            <rect key="frame" x="16" y="489" width="429" height="44"/>
-                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="44" id="vCh-6d-Uum"/>
-                            </constraints>
-                            <state key="normal" title="Schedule a ride">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="handleSchedule:" destination="iN0-l3-epB" eventType="touchUpInside" id="fS5-nt-QY8"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgj-Nl-EHm">
-                            <rect key="frame" x="16" y="549" width="429" height="44"/>
-                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="44" id="Ijf-T4-QIb"/>
-                            </constraints>
-                            <state key="normal" title="Get more info">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="handleMoreInfo:" destination="iN0-l3-epB" eventType="touchUpInside" id="ASk-VH-JIT"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="zPF-dE-ccw" firstAttribute="centerY" secondItem="7rC-4z-QIh" secondAttribute="centerY" multiplier="0.7" id="DRq-Et-rky"/>
-                        <constraint firstAttribute="trailing" secondItem="bgj-Nl-EHm" secondAttribute="trailing" constant="16" id="Iet-kM-GgP"/>
-                        <constraint firstItem="bgj-Nl-EHm" firstAttribute="leading" secondItem="7rC-4z-QIh" secondAttribute="leading" constant="16" id="QiK-FL-mUC"/>
-                        <constraint firstItem="sCE-qU-bAx" firstAttribute="leading" secondItem="7rC-4z-QIh" secondAttribute="leading" constant="16" id="WBx-IQ-1wf"/>
-                        <constraint firstAttribute="bottom" secondItem="bgj-Nl-EHm" secondAttribute="bottom" constant="16" id="YrX-yv-OB0"/>
+                        <constraint firstAttribute="trailing" secondItem="jp1-h7-ibP" secondAttribute="trailing" constant="16" id="3D3-Sg-xqu"/>
+                        <constraint firstItem="zPF-dE-ccw" firstAttribute="top" secondItem="7rC-4z-QIh" secondAttribute="top" constant="64" id="95b-8j-n1k"/>
+                        <constraint firstItem="jp1-h7-ibP" firstAttribute="leading" secondItem="7rC-4z-QIh" secondAttribute="leading" constant="16" id="OZQ-hM-ML4"/>
                         <constraint firstItem="zPF-dE-ccw" firstAttribute="centerX" secondItem="7rC-4z-QIh" secondAttribute="centerX" id="a5i-VF-YlA"/>
-                        <constraint firstItem="bgj-Nl-EHm" firstAttribute="top" secondItem="sCE-qU-bAx" secondAttribute="bottom" constant="16" id="y7T-u6-tyO"/>
-                        <constraint firstAttribute="trailing" secondItem="sCE-qU-bAx" secondAttribute="trailing" constant="16" id="zRJ-Mn-OJ8"/>
+                        <constraint firstAttribute="bottom" secondItem="jp1-h7-ibP" secondAttribute="bottom" constant="16" id="hxf-xr-psK"/>
                     </constraints>
                 </view>
             </subviews>
@@ -101,11 +130,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="containerView" destination="7rC-4z-QIh" id="ke4-8D-sll"/>
+                <outlet property="emailButton" destination="mQu-Uc-Ewe" id="kHH-hA-1Ue"/>
                 <outlet property="infoButton" destination="bgj-Nl-EHm" id="54h-Y4-XQY"/>
                 <outlet property="placeholderImageView" destination="jkc-ac-b9h" id="x0a-cm-pUK"/>
                 <outlet property="placeholderImageViewHeightConstraint" destination="ifO-8W-pUY" id="Fn8-av-Mdp"/>
                 <outlet property="scheduleButton" destination="sCE-qU-bAx" id="eaE-Oa-S3H"/>
                 <outlet property="subtitleLabel" destination="KIX-bx-p3I" id="pXM-fc-lSt"/>
+                <outlet property="textButton" destination="tVu-Ec-ymQ" id="2Wm-O8-LvI"/>
                 <outlet property="titleLabel" destination="B7S-Fw-IPm" id="ga6-uJ-m1p"/>
             </connections>
             <point key="canvasLocation" x="67.5" y="33.5"/>

@@ -8,23 +8,12 @@
 
 import UIKit
 
-protocol ScheduleProcessViewControllerDelegate: NSObjectProtocol {
-    func scheduleProcessViewController(_ viewController: ScheduleProcessViewController, didTapControl button: UIButton)
-}
-
 class ScheduleProcessViewController: UIViewController {
 
-    weak var delegate: ScheduleProcessViewControllerDelegate?
-
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
 
     static let storyboard_id = String(describing: ScheduleProcessViewController.self)
-
-    @IBAction func handleNext(_ sender: UIButton) {
-        self.delegate?.scheduleProcessViewController(self, didTapControl: sender)
-    }
 
     @IBAction func handleCancel(_ sender: UIBarButtonItem) {
         let alerController = self.initAlertController(title: "Cancel", message: "Are you sure you want to cancel this Ride?")
@@ -43,20 +32,20 @@ class ScheduleProcessViewController: UIViewController {
     }
 
     private func setupView() {
-        self.nextButton.layer.cornerRadius = 8
+        //
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        if let calendarViewController = segue.destination as? CalendarViewController {
-            calendarViewController.scheduleProcessViewController = self
-            self.delegate = calendarViewController
-        }
     }
 
 }

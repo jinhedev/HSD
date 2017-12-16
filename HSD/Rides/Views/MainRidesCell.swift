@@ -47,6 +47,10 @@ class MainRidesCell: UICollectionViewCell {
         self.setupCollectionView()
         self.setupBackgroundView()
         self.setupRealmManagerDelegate()
+        let ride = Ride(driver_name: "Gordon", title: "Going to school", pickup_date: NSDate(), is_completed: false)
+        let user = User(username: "sudofluff", first_name: "jin", last_name: "rightmeow", email: "jinhedev@gmail.com", password: "123123", role: 0)
+        user.rides.append(ride)
+//        realmManager?.addObject(objects: [user])
         // REMAKR: do NOT execute fetch here because cellType could be nil at this lifecycle
     }
 
@@ -75,6 +79,14 @@ extension MainRidesCell: PlaceholderBackgroundViewDelegate {
         }
     }
 
+    func placeholderBackgroundView(_ view: PlaceholderBackgroundView, didTapText button: UIButton) {
+        // ignore
+    }
+
+    func placeholderBackgroundView(_ view: PlaceholderBackgroundView, didTapEmail button: UIButton) {
+        // ignore
+    }
+
 }
 
 extension MainRidesCell: UICollectionViewDelegate {
@@ -90,8 +102,8 @@ extension MainRidesCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let unwrappedRides = self.rides?[indexPath.item] else { return CGSize.zero }
         let cellWidth = self.collectionView.frame.width
-        var cellHeight: CGFloat = 16 + 16 + (0) + 22 + 16 + 16
-        let titleLabelHeight = unwrappedRides.driver_name.heightForText(systemFont: 15, width: cellWidth - 32 - 32)
+        var cellHeight: CGFloat = 16 + 16 + (0) + 8 + 22 + 22 + 16 + 16
+        let titleLabelHeight = unwrappedRides.driver_name.heightForText(systemFont: 15, width: cellWidth - 32 - 56 - 16 - 32 - 56 - 16)
         cellHeight += titleLabelHeight
         return CGSize(width: cellWidth, height: cellHeight)
     }

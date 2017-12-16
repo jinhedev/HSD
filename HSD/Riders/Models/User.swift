@@ -19,6 +19,8 @@ class User: Object {
     @objc dynamic var created_at = NSDate()
     @objc dynamic var updated_at: NSDate? = nil
     @objc dynamic var password = ""
+    /// 0 == "normal user / parent", 1 == "rider / children", 2 == "driver"
+    @objc dynamic var role: Int = 0
 
     var rides = List<Ride>()
     var sessions = List<Session>()
@@ -29,7 +31,7 @@ class User: Object {
         return "user_id"
     }
 
-    convenience init(username: String, first_name: String, last_name: String, email: String, password: String) {
+    convenience init(username: String, first_name: String, last_name: String, email: String, password: String, role: Int) {
         self.init()
         self.user_id = UUID().uuidString
         self.username = username
@@ -38,6 +40,7 @@ class User: Object {
         self.email = email
         self.password = password
         self.created_at = NSDate()
+        self.role = role
     }
 
 }

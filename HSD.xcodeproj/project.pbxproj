@@ -12,10 +12,6 @@
 		C51A5F781FE0A8A10082A405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51A5F761FE0A8A10082A405 /* Main.storyboard */; };
 		C51A5F7A1FE0A8A10082A405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51A5F791FE0A8A10082A405 /* Assets.xcassets */; };
 		C51A5F7D1FE0A8A10082A405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51A5F7B1FE0A8A10082A405 /* LaunchScreen.storyboard */; };
-		C51A5F9E1FE0CD580082A405 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51A5F9B1FE0CD3F0082A405 /* Realm.framework */; };
-		C51A5F9F1FE0CD580082A405 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C51A5F9B1FE0CD3F0082A405 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C51A5FA01FE0CD580082A405 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51A5F9A1FE0CD3F0082A405 /* RealmSwift.framework */; };
-		C51A5FA11FE0CD580082A405 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C51A5F9A1FE0CD3F0082A405 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C51A5FA71FE0CF990082A405 /* RidesTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FA61FE0CF990082A405 /* RidesTab.storyboard */; };
 		C51A5FA91FE0D2AE0082A405 /* PlaceholderBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FA81FE0D2AE0082A405 /* PlaceholderBackgroundView.xib */; };
 		C51A5FAB1FE0D2D10082A405 /* PlaceholderBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FAA1FE0D2D10082A405 /* PlaceholderBackgroundView.swift */; };
@@ -47,6 +43,13 @@
 		C51A5FE91FE1BA3E0082A405 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FE81FE1BA3E0082A405 /* AuthViewController.swift */; };
 		C51A5FEB1FE1BA9C0082A405 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FEA1FE1BA9C0082A405 /* Welcome.storyboard */; };
 		C51A5FEE1FE1BD570082A405 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FED1FE1BD570082A405 /* Session.swift */; };
+		C54E53051FE4C8C40071E504 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C54E53041FE4C8C40071E504 /* GoogleService-Info.plist */; };
+		C5AACE2A1FE4E6D60025AA97 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE261FE4E6C60025AA97 /* JTAppleCalendar.framework */; };
+		C5AACE2B1FE4E6D60025AA97 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE261FE4E6C60025AA97 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5AACE2C1FE4E6D60025AA97 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE251FE4E6C60025AA97 /* Realm.framework */; };
+		C5AACE2D1FE4E6D60025AA97 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE251FE4E6C60025AA97 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5AACE2E1FE4E6D60025AA97 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE241FE4E6C60025AA97 /* RealmSwift.framework */; };
+		C5AACE2F1FE4E6D60025AA97 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE241FE4E6C60025AA97 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C5DB745A1FE29F8500DF4216 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB74591FE29F8500DF4216 /* AvatarViewController.swift */; };
 		C5DB745C1FE2EFE600DF4216 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB745B1FE2EFE600DF4216 /* CalendarViewController.swift */; };
 		C5DB745E1FE2FF4D00DF4216 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB745D1FE2FF4D00DF4216 /* TimeViewController.swift */; };
@@ -54,8 +57,6 @@
 		C5DE94471FE231EF00DA6C7E /* UICollectionView+BatchUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DE94461FE231EF00DA6C7E /* UICollectionView+BatchUpdates.swift */; };
 		C5DE94491FE23AA300DA6C7E /* UITableView+BatchUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DE94481FE23AA300DA6C7E /* UITableView+BatchUpdates.swift */; };
 		C5DE94591FE23CCA00DA6C7E /* RidesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DE94581FE23CCA00DA6C7E /* RidesViewControllerTests.swift */; };
-		C5DE945B1FE2409800DA6C7E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51A5F9B1FE0CD3F0082A405 /* Realm.framework */; };
-		C5DE945C1FE2409800DA6C7E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51A5F9A1FE0CD3F0082A405 /* RealmSwift.framework */; };
 		C5DE945E1FE247F200DA6C7E /* RidersHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DE945D1FE247F200DA6C7E /* RidersHeaderView.swift */; };
 		C5DE94601FE2483200DA6C7E /* RidersHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5DE945F1FE2483200DA6C7E /* RidersHeaderView.xib */; };
 		C5DE94621FE25BCA00DA6C7E /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DE94611FE25BCA00DA6C7E /* AddUserViewController.swift */; };
@@ -79,8 +80,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C51A5FA11FE0CD580082A405 /* RealmSwift.framework in Embed Frameworks */,
-				C51A5F9F1FE0CD580082A405 /* Realm.framework in Embed Frameworks */,
+				C5AACE2D1FE4E6D60025AA97 /* Realm.framework in Embed Frameworks */,
+				C5AACE2B1FE4E6D60025AA97 /* JTAppleCalendar.framework in Embed Frameworks */,
+				C5AACE2F1FE4E6D60025AA97 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,8 +97,6 @@
 		C51A5F791FE0A8A10082A405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C51A5F7C1FE0A8A10082A405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C51A5F7E1FE0A8A10082A405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C51A5F9A1FE0CD3F0082A405 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
-		C51A5F9B1FE0CD3F0082A405 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
 		C51A5FA61FE0CF990082A405 /* RidesTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RidesTab.storyboard; sourceTree = "<group>"; };
 		C51A5FA81FE0D2AE0082A405 /* PlaceholderBackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderBackgroundView.xib; sourceTree = "<group>"; };
 		C51A5FAA1FE0D2D10082A405 /* PlaceholderBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderBackgroundView.swift; sourceTree = "<group>"; };
@@ -128,6 +128,12 @@
 		C51A5FE81FE1BA3E0082A405 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C51A5FEA1FE1BA9C0082A405 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		C51A5FED1FE1BD570082A405 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		C54E53041FE4C8C40071E504 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5AACE241FE4E6C60025AA97 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		C5AACE251FE4E6C60025AA97 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		C5AACE261FE4E6C60025AA97 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
+		C5AACE3E1FE4EC8C0025AA97 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		C5AACE3F1FE4ED190025AA97 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C5DB74591FE29F8500DF4216 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		C5DB745B1FE2EFE600DF4216 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C5DB745D1FE2FF4D00DF4216 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
@@ -148,8 +154,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51A5F9E1FE0CD580082A405 /* Realm.framework in Frameworks */,
-				C51A5FA01FE0CD580082A405 /* RealmSwift.framework in Frameworks */,
+				C5AACE2C1FE4E6D60025AA97 /* Realm.framework in Frameworks */,
+				C5AACE2A1FE4E6D60025AA97 /* JTAppleCalendar.framework in Frameworks */,
+				C5AACE2E1FE4E6D60025AA97 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,8 +164,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5DE945B1FE2409800DA6C7E /* Realm.framework in Frameworks */,
-				C5DE945C1FE2409800DA6C7E /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				C51A5F871FE0BB680082A405 /* App */,
-				C51A5F991FE0CD260082A405 /* Frameworks */,
 				C51A5F941FE0BFBB0082A405 /* Networking */,
 				C51A5F981FE0C2660082A405 /* Persistence */,
 				C51A5FD01FE134C20082A405 /* Riders */,
@@ -223,10 +227,10 @@
 		C51A5F871FE0BB680082A405 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C51A5FEC1FE1BD4D0082A405 /* Models */,
 				C51A5F881FE0BB770082A405 /* AppDelegate */,
 				C51A5F891FE0BB840082A405 /* Controllers */,
 				C51A5FE11FE1A05F0082A405 /* Extensions */,
+				C51A5FEC1FE1BD4D0082A405 /* Models */,
 				C51A5F8B1FE0BB9A0082A405 /* Resources */,
 				C51A5F8A1FE0BB8F0082A405 /* Supporting Files */,
 				C51A5F8C1FE0BBA10082A405 /* Views */,
@@ -253,9 +257,12 @@
 		C51A5F8A1FE0BB8F0082A405 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C51A5FB61FE0DC880082A405 /* Cartfile.resolved */,
+				C5AACE3F1FE4ED190025AA97 /* module.modulemap */,
+				C5AACE3E1FE4EC8C0025AA97 /* Firebase.h */,
 				C51A5FB41FE0DC810082A405 /* Cartfile */,
+				C51A5FB61FE0DC880082A405 /* Cartfile.resolved */,
 				C51A5FB01FE0D7AA0082A405 /* CREDITS */,
+				C54E53041FE4C8C40071E504 /* GoogleService-Info.plist */,
 				C51A5F7E1FE0A8A10082A405 /* Info.plist */,
 				C51A5FB21FE0D9AB0082A405 /* LICENSE */,
 			);
@@ -386,15 +393,6 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		C51A5F991FE0CD260082A405 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C51A5F9B1FE0CD3F0082A405 /* Realm.framework */,
-				C51A5F9A1FE0CD3F0082A405 /* RealmSwift.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		C51A5FA41FE0CE140082A405 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +490,9 @@
 		C5DE945A1FE2409800DA6C7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5AACE261FE4E6C60025AA97 /* JTAppleCalendar.framework */,
+				C5AACE251FE4E6C60025AA97 /* Realm.framework */,
+				C5AACE241FE4E6C60025AA97 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -593,6 +594,7 @@
 				C51A5FD81FE138F40082A405 /* RiderCell.xib in Resources */,
 				C51A5FAF1FE0D5C20082A405 /* MenuBarView.xib in Resources */,
 				C51A5F7A1FE0A8A10082A405 /* Assets.xcassets in Resources */,
+				C54E53051FE4C8C40071E504 /* GoogleService-Info.plist in Resources */,
 				C51A5FD61FE1351B0082A405 /* RidersTab.storyboard in Resources */,
 				C51A5FCB1FE0FB260082A405 /* MainRidesCell.xib in Resources */,
 				C5DE94601FE2483200DA6C7E /* RidersHeaderView.xib in Resources */,
@@ -820,13 +822,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HSD/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rightmeow.HSD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -839,13 +846,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HSD/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rightmeow.HSD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

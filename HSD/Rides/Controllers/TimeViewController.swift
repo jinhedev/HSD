@@ -10,9 +10,8 @@ import UIKit
 
 class TimeViewController: UIViewController {
 
-    var previousViewController: CalendarViewController?
-
     static let storyboard_id = String(describing: TimeViewController.self)
 
+    
 
 }
