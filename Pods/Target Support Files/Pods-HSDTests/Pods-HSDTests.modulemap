@@ -1,0 +1,6 @@
+framework module Pods_HSDTests {
+  umbrella header "Pods-HSDTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

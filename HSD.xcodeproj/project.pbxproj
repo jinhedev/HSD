@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ECC469B7E9D970A801D3C20 /* Pods_HSD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353B84E27D022E5AD03396EA /* Pods_HSD.framework */; };
+		887C75B3993F35BC21BF41A7 /* Pods_HSDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC787BE4D190B15DAF2B33F1 /* Pods_HSDTests.framework */; };
 		C51A5F731FE0A8A10082A405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5F721FE0A8A10082A405 /* AppDelegate.swift */; };
 		C51A5F751FE0A8A10082A405 /* RidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5F741FE0A8A10082A405 /* RidesViewController.swift */; };
 		C51A5F781FE0A8A10082A405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51A5F761FE0A8A10082A405 /* Main.storyboard */; };
@@ -19,8 +21,6 @@
 		C51A5FAF1FE0D5C20082A405 /* MenuBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FAE1FE0D5C20082A405 /* MenuBarView.xib */; };
 		C51A5FB11FE0D7AA0082A405 /* CREDITS in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FB01FE0D7AA0082A405 /* CREDITS */; };
 		C51A5FB31FE0D9AB0082A405 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FB21FE0D9AB0082A405 /* LICENSE */; };
-		C51A5FB51FE0DC810082A405 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FB41FE0DC810082A405 /* Cartfile */; };
-		C51A5FB71FE0DC880082A405 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FB61FE0DC880082A405 /* Cartfile.resolved */; };
 		C51A5FB91FE0EEEF0082A405 /* MenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FB81FE0EEEF0082A405 /* MenuBarCell.swift */; };
 		C51A5FBB1FE0F0690082A405 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FBA1FE0F0690082A405 /* Menu.swift */; };
 		C51A5FBD1FE0F1220082A405 /* MenuBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FBC1FE0F1220082A405 /* MenuBarCell.xib */; };
@@ -43,13 +43,7 @@
 		C51A5FE91FE1BA3E0082A405 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FE81FE1BA3E0082A405 /* AuthViewController.swift */; };
 		C51A5FEB1FE1BA9C0082A405 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51A5FEA1FE1BA9C0082A405 /* Welcome.storyboard */; };
 		C51A5FEE1FE1BD570082A405 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A5FED1FE1BD570082A405 /* Session.swift */; };
-		C54E53051FE4C8C40071E504 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C54E53041FE4C8C40071E504 /* GoogleService-Info.plist */; };
-		C5AACE2A1FE4E6D60025AA97 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE261FE4E6C60025AA97 /* JTAppleCalendar.framework */; };
-		C5AACE2B1FE4E6D60025AA97 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE261FE4E6C60025AA97 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C5AACE2C1FE4E6D60025AA97 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE251FE4E6C60025AA97 /* Realm.framework */; };
-		C5AACE2D1FE4E6D60025AA97 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE251FE4E6C60025AA97 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C5AACE2E1FE4E6D60025AA97 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE241FE4E6C60025AA97 /* RealmSwift.framework */; };
-		C5AACE2F1FE4E6D60025AA97 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5AACE241FE4E6C60025AA97 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C53A3AAD1FE5BC640057BFFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C53A3AAC1FE5BC640057BFFE /* GoogleService-Info.plist */; };
 		C5DB745A1FE29F8500DF4216 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB74591FE29F8500DF4216 /* AvatarViewController.swift */; };
 		C5DB745C1FE2EFE600DF4216 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB745B1FE2EFE600DF4216 /* CalendarViewController.swift */; };
 		C5DB745E1FE2FF4D00DF4216 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB745D1FE2FF4D00DF4216 /* TimeViewController.swift */; };
@@ -80,9 +74,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C5AACE2D1FE4E6D60025AA97 /* Realm.framework in Embed Frameworks */,
-				C5AACE2B1FE4E6D60025AA97 /* JTAppleCalendar.framework in Embed Frameworks */,
-				C5AACE2F1FE4E6D60025AA97 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +81,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		353B84E27D022E5AD03396EA /* Pods_HSD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CC4579C93665BC1B264F04C /* Pods-HSDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSDTests/Pods-HSDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		50171FD4B827361397826829 /* Pods-HSDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSDTests/Pods-HSDTests.release.xcconfig"; sourceTree = "<group>"; };
+		BC787BE4D190B15DAF2B33F1 /* Pods_HSDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51A5F6F1FE0A8A10082A405 /* HSD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51A5F721FE0A8A10082A405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C51A5F741FE0A8A10082A405 /* RidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesViewController.swift; sourceTree = "<group>"; };
@@ -104,8 +99,6 @@
 		C51A5FAE1FE0D5C20082A405 /* MenuBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBarView.xib; sourceTree = "<group>"; };
 		C51A5FB01FE0D7AA0082A405 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		C51A5FB21FE0D9AB0082A405 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C51A5FB41FE0DC810082A405 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		C51A5FB61FE0DC880082A405 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = SOURCE_ROOT; };
 		C51A5FB81FE0EEEF0082A405 /* MenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarCell.swift; sourceTree = "<group>"; };
 		C51A5FBA1FE0F0690082A405 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		C51A5FBC1FE0F1220082A405 /* MenuBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBarCell.xib; sourceTree = "<group>"; };
@@ -128,12 +121,7 @@
 		C51A5FE81FE1BA3E0082A405 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C51A5FEA1FE1BA9C0082A405 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		C51A5FED1FE1BD570082A405 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		C54E53041FE4C8C40071E504 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C5AACE241FE4E6C60025AA97 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		C5AACE251FE4E6C60025AA97 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		C5AACE261FE4E6C60025AA97 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
-		C5AACE3E1FE4EC8C0025AA97 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
-		C5AACE3F1FE4ED190025AA97 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		C53A3AAC1FE5BC640057BFFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C5DB74591FE29F8500DF4216 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		C5DB745B1FE2EFE600DF4216 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C5DB745D1FE2FF4D00DF4216 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +135,8 @@
 		C5DE945F1FE2483200DA6C7E /* RidersHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RidersHeaderView.xib; sourceTree = "<group>"; };
 		C5DE94611FE25BCA00DA6C7E /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		C5DE94631FE2705200DA6C7E /* NamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesViewController.swift; sourceTree = "<group>"; };
+		E6982503C61A025EA1A4764A /* Pods-HSD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSD.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSD/Pods-HSD.release.xcconfig"; sourceTree = "<group>"; };
+		F559DA9B736BE102BFDB5218 /* Pods-HSD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSD/Pods-HSD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,9 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5AACE2C1FE4E6D60025AA97 /* Realm.framework in Frameworks */,
-				C5AACE2A1FE4E6D60025AA97 /* JTAppleCalendar.framework in Frameworks */,
-				C5AACE2E1FE4E6D60025AA97 /* RealmSwift.framework in Frameworks */,
+				0ECC469B7E9D970A801D3C20 /* Pods_HSD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,19 +152,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887C75B3993F35BC21BF41A7 /* Pods_HSDTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		444DE23E7FAE07722DEB6DB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F559DA9B736BE102BFDB5218 /* Pods-HSD.debug.xcconfig */,
+				E6982503C61A025EA1A4764A /* Pods-HSD.release.xcconfig */,
+				3CC4579C93665BC1B264F04C /* Pods-HSDTests.debug.xcconfig */,
+				50171FD4B827361397826829 /* Pods-HSDTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C037A0F602178F5DA39448C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				353B84E27D022E5AD03396EA /* Pods_HSD.framework */,
+				BC787BE4D190B15DAF2B33F1 /* Pods_HSDTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C51A5F661FE0A8A10082A405 = {
 			isa = PBXGroup;
 			children = (
 				C51A5F711FE0A8A10082A405 /* HSD */,
 				C5DE944F1FE23C5800DA6C7E /* HSDTests */,
 				C51A5F701FE0A8A10082A405 /* Products */,
-				C5DE945A1FE2409800DA6C7E /* Frameworks */,
+				444DE23E7FAE07722DEB6DB1 /* Pods */,
+				C037A0F602178F5DA39448C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,12 +267,8 @@
 		C51A5F8A1FE0BB8F0082A405 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C5AACE3F1FE4ED190025AA97 /* module.modulemap */,
-				C5AACE3E1FE4EC8C0025AA97 /* Firebase.h */,
-				C51A5FB41FE0DC810082A405 /* Cartfile */,
-				C51A5FB61FE0DC880082A405 /* Cartfile.resolved */,
+				C53A3AAC1FE5BC640057BFFE /* GoogleService-Info.plist */,
 				C51A5FB01FE0D7AA0082A405 /* CREDITS */,
-				C54E53041FE4C8C40071E504 /* GoogleService-Info.plist */,
 				C51A5F7E1FE0A8A10082A405 /* Info.plist */,
 				C51A5FB21FE0D9AB0082A405 /* LICENSE */,
 			);
@@ -487,16 +493,6 @@
 			path = HSDTests;
 			sourceTree = "<group>";
 		};
-		C5DE945A1FE2409800DA6C7E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C5AACE261FE4E6C60025AA97 /* JTAppleCalendar.framework */,
-				C5AACE251FE4E6C60025AA97 /* Realm.framework */,
-				C5AACE241FE4E6C60025AA97 /* RealmSwift.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -504,11 +500,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C51A5F811FE0A8A10082A405 /* Build configuration list for PBXNativeTarget "HSD" */;
 			buildPhases = (
+				6707595D3799491CCB2F803D /* [CP] Check Pods Manifest.lock */,
 				C51A5F6B1FE0A8A10082A405 /* Sources */,
 				C51A5F6C1FE0A8A10082A405 /* Frameworks */,
 				C51A5F6D1FE0A8A10082A405 /* Resources */,
 				C51A5FA21FE0CD580082A405 /* Embed Frameworks */,
-				C51A5FA31FE0CDA20082A405 /* ShellScript */,
+				5A0ABB235DE9A3B3372AE968 /* [CP] Embed Pods Frameworks */,
+				0C057240AE6730A4E8725C8B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -523,9 +521,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5DE94551FE23C5800DA6C7E /* Build configuration list for PBXNativeTarget "HSDTests" */;
 			buildPhases = (
+				14C236CEE7CA23BC7BE57C91 /* [CP] Check Pods Manifest.lock */,
 				C5DE944A1FE23C5800DA6C7E /* Sources */,
 				C5DE944B1FE23C5800DA6C7E /* Frameworks */,
 				C5DE944C1FE23C5800DA6C7E /* Resources */,
+				76C28053CA51A697929DBB1C /* [CP] Embed Pods Frameworks */,
+				32DD36A8FCFB06DB3988852A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -549,6 +550,7 @@
 				TargetAttributes = {
 					C51A5F6E1FE0A8A10082A405 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					C5DE944D1FE23C5800DA6C7E = {
@@ -583,10 +585,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51A5FB51FE0DC810082A405 /* Cartfile in Resources */,
 				C51A5FA71FE0CF990082A405 /* RidesTab.storyboard in Resources */,
 				C51A5F7D1FE0A8A10082A405 /* LaunchScreen.storyboard in Resources */,
-				C51A5FB71FE0DC880082A405 /* Cartfile.resolved in Resources */,
 				C51A5FB31FE0D9AB0082A405 /* LICENSE in Resources */,
 				C51A5FEB1FE1BA9C0082A405 /* Welcome.storyboard in Resources */,
 				C51A5FBD1FE0F1220082A405 /* MenuBarCell.xib in Resources */,
@@ -594,7 +594,7 @@
 				C51A5FD81FE138F40082A405 /* RiderCell.xib in Resources */,
 				C51A5FAF1FE0D5C20082A405 /* MenuBarView.xib in Resources */,
 				C51A5F7A1FE0A8A10082A405 /* Assets.xcassets in Resources */,
-				C54E53051FE4C8C40071E504 /* GoogleService-Info.plist in Resources */,
+				C53A3AAD1FE5BC640057BFFE /* GoogleService-Info.plist in Resources */,
 				C51A5FD61FE1351B0082A405 /* RidersTab.storyboard in Resources */,
 				C51A5FCB1FE0FB260082A405 /* MainRidesCell.xib in Resources */,
 				C5DE94601FE2483200DA6C7E /* RidersHeaderView.xib in Resources */,
@@ -614,20 +614,112 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C51A5FA31FE0CDA20082A405 /* ShellScript */ = {
+		0C057240AE6730A4E8725C8B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSD/Pods-HSD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14C236CEE7CA23BC7BE57C91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HSDTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32DD36A8FCFB06DB3988852A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSDTests/Pods-HSDTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A0ABB235DE9A3B3372AE968 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HSD/Pods-HSD-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSD/Pods-HSD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6707595D3799491CCB2F803D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HSD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76C28053CA51A697929DBB1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSDTests/Pods-HSDTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -815,13 +907,14 @@
 		};
 		C51A5F821FE0A8A10082A405 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F559DA9B736BE102BFDB5218 /* Pods-HSD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LUU7Q496SS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -831,6 +924,8 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rightmeow.HSD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -839,13 +934,14 @@
 		};
 		C51A5F831FE0A8A10082A405 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6982503C61A025EA1A4764A /* Pods-HSD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LUU7Q496SS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -855,6 +951,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rightmeow.HSD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -863,15 +960,13 @@
 		};
 		C5DE94561FE23C5800DA6C7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CC4579C93665BC1B264F04C /* Pods-HSDTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LUU7Q496SS;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = HSDTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rightmeow.HSDTests;
@@ -885,15 +980,13 @@
 		};
 		C5DE94571FE23C5800DA6C7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50171FD4B827361397826829 /* Pods-HSDTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LUU7Q496SS;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = HSDTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rightmeow.HSDTests;
